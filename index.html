@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Web design by Zach Biri-->
+
+<head>
+
+<!-- google analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106954787-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-106954787-2');
+  </script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rendr | A pop-up gallery where art meets interactive technology</title>
+
+  <!-- favicon stuff -->
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+  <!-- opengraph stuff -->
+  <meta property="og:title" content="Rendr">
+  <meta property="og:site_name" content="Rendr">
+  <meta property="og:url" content="http://rendrpopup.com">
+  <meta property="og:description" content="A pop-up gallery where art meets interactive technology. Hosted by 1871 in Chicago, IL May 2nd 2018.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://rendrpopup.com/og.jpg">
+  <meta property="fb:app_id" content="123772858333083">
+
+
+  <!-- font-awesome 5 pro (the webfonts version, because the js/svg version is slooooooooow) -->
+  <link rel="stylesheet" href="./css/fontawesome-all.css">
+
+  <!-- my stylesheet post-build processing: see sass directory for uncompiled/unminified/unprefixed scss -->
+  <!-- see package.json for build environment -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Shims -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <!-- facebook spies -->
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+  <!-- fb analytics -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '123772858333083',
+        xfbml: true,
+        version: 'v2.10'
+      });
+
+      FB.AppEvents.logPageView();
+
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+ <!-- bootstrap navbar -->
+ <!-- find the styles in sass/layout/_navigation.scss -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img class="navbar__logo" src="./assets/img/logo2.png" alt="Rendr">
+        </a>
+      </div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right" id="navbar">
+        <ul class="nav navbar-nav">
+          <li>
+            <a class="navbar__link" href="#home">Home</a>
+          </li>
+          <li>
+            <a class="navbar__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="navbar__link" href="#artists">Artists</a>
+          </li>
+          <li>
+            <a class="navbar__link" href="#sponsors">Sponsors</a>
+          </li>
+        </ul>
+
+      </div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container-fluid -->
+  </nav>
+<!-- header -->
+
+<!-- this div is the fixed slideshow behind the transparent jumbotron.  -->
+<!-- edit this in sass/components/_cb-slideshow.scss  -->
+  <div class="cb-slideshow__container">
+    <ul class="cb-slideshow">
+      <li class="cb-slideshow__item">
+        <span class="cb-slideshow__frame"></span>
+      </li>
+      <li class="cb-slideshow__item">
+        <span class="cb-slideshow__frame"></span>
+      </li>
+      <li class="cb-slideshow__item">
+        <span class="cb-slideshow__frame"></span>
+      </li>
+      <li class="cb-slideshow__item">
+        <span class="cb-slideshow__frame"></span>
+      </li>
+      <li class="cb-slideshow__item">
+        <span class="cb-slideshow__frame"></span>
+      </li>
+      <li class="cb-slideshow__item">
+        <span class="cb-slideshow__frame"></span>
+      </li>
+    </ul>
+  </div>
+
+<!-- header, jumbotron, etc -->
+<!-- styles in sass/components/_jumbotron.scss -->
+  <section class="jumbotron" id="home">
+    <div class="container jumbotron__container">
+      <img class="jumbotron__logo" src="./assets/img/logo1.png" alt="Rendr">
+      <h3 class="jumbotron__subtitle">A pop-up gallery where art meets interactive technology</h3>
+      <h4 class="jumbotron__location">Hosted by
+        <a class="jumbotron__link" href="https://1871.com/">1871</a>
+        <a class="jumbotron__link" href="https://goo.gl/maps/VSQHoxQm47z">
+          <i class="mapmarker fas fa-map-marker-alt animated tada jumbotron__map-marker"></i>
+        </a> May 2nd, 2018</h4>
+      <button onclick="window.location.href = '#mailbox';" type="button" class="btn btn-default btn-sm jumbotron__btn">
+        <i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;Stay Posted</button>
+      <!-- <button onclick="window.location.href = 'https://www.eventbrite.com/e/rendr-pop-up-tickets-45147780226';" type="button" class="btn btn-default btn-sm jumbotron__btn">
+        <i class="fa fa-calendar-alt"></i>&nbsp;&nbsp;&nbsp;Eventbrite</button> -->
+      <button onclick="window.location.href = 'https://www.facebook.com/rendrpopup/';" type="button" class="btn btn-default btn-sm jumbotron__btn">
+        <i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;&nbsp;Facebook</button>
+    </div>
+  </section>
+
+<!-- about -->
+<!-- all other section styles besides the footer can be found in sass/pages/_home.scss -->
+  <section class="section section-about skewed">
+    <div class="container">
+      <h1 class="section-about__header u-margin-bottom-big" id="about">About</h1>
+      <p class="section-paragraph">Rendr is a new popup art show in Chicago featuring cutting-edge immersive technology. Its aim is to bring you closer
+        than ever before to understanding what it means to experience reality in a world that is increasingly virtual.</p>
+      <p class="section-paragraph">Through Virtual Reality, Augmented Reality, Projection Mapping, Haptics, and other technologies, this exhibit will
+        allow you to explore your senses and dive into an experience to reconsider your conceptions of what is and isn’t
+        “real.”
+      </p>
+    </div>
+  </section>
+
+<!-- artists -->
+<!-- I made the associated styles/behaviors of each artist listing a sass component.  find the styles in sass/components/_artist.scss -->
+  <section class="section section-artists">
+    <div class="container">
+      <h1 class="u-margin-bottom-big" id="artists">Artists</h1>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 artist">
+          <a href="https://chriscollins.online/">
+            <img class="artist__pic" src="./assets/img/artists/chriscollins.jpg" alt="Chris Collins">
+            <h2 class="artist__name">CHRIS COLLINS</h2>
+          </a>
+          <p class="artist__bio">Chris Collins is an artist based in Chicago where he is a lecturer at The School of the Art Institute. He is infinitely
+            fascinated in networked technologies as a cultural force, and as a site of many inherent contradictions: a place
+            of beauty and banality, of empowerment and surveillance, of connection and commodification. Chris’s work sits
+            at this intersection, attempting to find poetry, humor, and logic from within this awkward squirm of digital
+            culture.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 artist">
+          <a href="http://calebfoss.com">
+            <img class="artist__pic" src="./assets/img/artists/calebfoss.jpg" alt="Caleb Foss">
+            <h2 class="artist__name">CALEB FOSS</h2>
+          </a>
+          <p class="artist__bio">Caleb Foss combines a spectrum of old and new media devices with a focus on how their mechanics reflect and impact
+            social and political structures. Drawing from a fascination with amusement park rides and magic tricks, these
+            projects take an imaginative approach to everyday technologies. </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 artist">
+          <a href="http://theotherchrisreeves.com">
+            <img class="artist__pic" src="./assets/img/artists/chrisreeves.jpg" alt="Chris Reeves">
+            <!-- <img src="http://www.fillmurray.com/300/300" alt="Chris Reeves"> -->
+            <h2 class="artist__name">CHRIS REEVES</h1>
+          </a>
+          <p class="artist__bio">Chris Reeves is an art historian, artist, and writer. His work often looks at the attempts and effects of social
+            and collaborative turns in art historical moments ca. 1950-today. He is one half of the artists' book imprint
+            Thingstead, and the coordinator of "Expanded Art History for Plants," a series of art historical lectures to
+            be held in greenhouses. He is currently working on a book about the world's worst orchestra while working towards
+            a phd in art history at the University of Illinois at Chicago. </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 artist">
+          <a href="http://www.weinventyou.net">
+            <img class="artist__pic" src="./assets/img/artists/zachscott.jpg" alt="Zach Scott">
+            <!-- <img src="http://www.fillmurray.com/g/300/300" alt="Zach Scott"> -->
+            <h2 class="artist__name">ZACH SCOTT</h1>
+          </a>
+          <p class="artist__bio">Zach Scott is a new media artist based in Chicago. He incorporates elements of randomization, loops, and chance
+            composition to create endless websites, light installations, videos, and animations. He is interested in the
+            boundaries between participation and spectatorship.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 artist">
+          <a href="http://laurencsudbrink.com">
+            <img class="artist__pic" src="./assets/img/artists/laurensudbrink.jpg" alt="Lauren Sudbrink">
+            <!-- <img src="http://www.fillmurray.com/g/300/300" alt="Lauren Sudbrink"> -->
+            <h2 class="artist__name">LAUREN SUDBRINK</h2>
+          </a>
+          <p class="artist__bio">Lauren C. Sudbrink lives and works in Chicago. Her work is at the intersection of performance, photography, and
+            sculpture, investigating the ways and forms in which the social apparatus affects the body. She received her
+            BFA from the University of Minnesota Twin Cities in 2009, and her MFA from the University of Illinois at Chicago
+            in 2015.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 artist">
+          <a href="https://www.realitybyteschicago.com/">
+            <img class="artist__pic" src="./assets/img/artists/RealityBytes_RGB.png" alt="Reality Bytes">
+            <!-- <img src="http://www.fillmurray.com/g/300/300" alt="Zach Scott"> -->
+            <h2 class="artist__name">REALITY BYTES</h1>
+          </a>
+          <p class="artist__bio">Reality Bytes is an immersive tech agency that provides VR, AR, and 360 services for education, entertainment,
+            and enterprise. Their one-stop-shop guides you from an introduction to the technology through its successful
+            deployment into your needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- sponsors -->
+  <section class="section section-sponsors skewed">
+    <div class="container">
+      <h1 class="u-margin-bottom-big" id="sponsors">Sponsors</h1>
+      <div class="row section-sponsors__sponsors">
+        <div class="col-xs-12 col-sm-6 col-md-6 text-center align-middle">
+          <a href="https://1871.com/">
+            <img class="section-sponsors__sponsors-badge" src="./assets/img/sponsors/1871.png" alt="1871">
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 text-center align-middle">
+          <a href="https://web.iit.edu">
+            <img class="section-sponsors__sponsors-badge" src="./assets/img/sponsors/ciit.png" alt="Illinois Institute of Technology">
+          </a>
+        </div>
+      </div>
+      <h3 class="u-margin-bottom-small">Would you like to sponsor a future pop-up?</h3>
+      <p class="section-paragraph">Rendr is actively seeking sponsors to help fund our not-for-profit events. All sponsors will receive recognition via
+        the website, and substantial donors will receive consideration on posters and marketing materials. For more information
+        about how you or your business can contribute, please email
+        <a class="section-sponsors__link" href="mailto:amy@rendrpopup.com?subject=Sponsorship Proposal">amy@rendrpopup.com</a>.</p>
+    </div>
+  </section>
+
+<!-- footer -->
+<!-- sass/layout/_footer.scss for stylez -->
+  <footer class="section footer">
+    <div class="container">
+      <div class="col-xs-12 text-center align-middle footer__logobox">&nbsp;</div>
+    </div>
+    <div class="container">
+      <div id="mailbox" class="col-xs-12 col-sm-6 col-md-6 align-middle footer__left">
+
+<!-- Begin MailChimp Signup Form -->
+<!-- did my best to convert this classless atrocity to BEM, but it could stand further refactoring, and it just bounces you to a mc-hosted form anyway -->
+        <div class="mail" id="mc_embed_signup">
+          <form action="https://rendrpopup.us17.list-manage.com/subscribe/post?u=157380bcc31f77c44d9b8d64b&amp;id=1ca97c3570" method="post"
+            id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <h2 class="mail__header">Subscribe to our mailing list</h2>
+              <div class="mail__mc-field-group">
+                <input type="email" placeholder="E-mail address *" value="" name="EMAIL" class="required email mail__input" id="mce-EMAIL">
+                <label class="mail__label" for="mce-EMAIL">Email Address
+                  <span class="mail__asterisk">*</span>
+                </label>
+              </div>
+              <div class="mail__mc-field-group">
+                <input type="text" placeholder="First name *" value="" name="FNAME" class="required mail__input" id="mce-FNAME">
+                <label class="mail__label" for="mce-FNAME">First Name
+                  <span class="mail__asterisk">*</span>
+                </label>
+              </div>
+              <div class="mail__mc-field-group">
+                <input type="text" placeholder="Last name *" value="" name="LNAME" class="required mail__input" id="mce-LNAME">
+                <label class="mail__label" for="mce-LNAME">Last Name
+                  <span class="mail__asterisk">*</span>
+                </label>
+              </div>
+              <div class="mail__indicates-required">
+                <span class="mail__asterisk">*</span> indicates required</div>
+              <div id="mce-responses" class="clear">
+                <div class="mail__response" id="mce-error-response" style="display:none"></div>
+                <div class="mail__response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_157380bcc31f77c44d9b8d64b_1ca97c3570" tabindex="-1" value="">
+              </div>
+              <div class="clear">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="mail__button">
+              </div>
+            </div>
+          </form>
+        </div>
+<!--End mc_embed_signup-->
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 align-middle footer__right">
+        <ul class="footer__list">
+          <li>
+            <a class="footer__link" href="mailto:amy@rendrpopup.com">
+              <i class="fas fa-envelope"></i>: amy@rendrpopup.com</a>
+          </li>
+          <li>
+            <a class="footer__link" href="https://www.facebook.com/rendrpopup/">
+              <i class="fab fa-facebook"></i>: @rendrpopup</a>
+          </li>
+          <li>
+            <a class="footer__link" href="http://zachbiri.com">
+              <i class="fab fa-html5"></i>
+              <i class="fab fa-sass"></i>
+              <i class="fab fa-js-square"></i>: Zach Biri</a>
+          </li>
+          <li>
+            <i class="fas fa-copyright"></i>: Rendr 2018</li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+<!-- jQuery (necessary for the Bootstrap JavaScript plugins) -->
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

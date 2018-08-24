@@ -1,0 +1,20 @@
+.navbar {
+    margin-bottom   : 0;
+    border-radius   : 0;
+    background-color: $color-grey-dark;
+    font-family     : $font-secondary;
+    &__link {
+        font-family: $font-secondary;
+    }
+    &__logo {
+        margin-top : -1.2rem;
+        margin-left: -1rem;
+        height     : 4rem;
+        width      : auto;
+        transition: all 200ms ease-in-out;
+        &:hover {
+            transform: scale3d(1.05,1.05, 1.05) translateY(-.1rem);
+            filter: drop-shadow(0 .2rem .2rem black);
+        }
+    }
+}

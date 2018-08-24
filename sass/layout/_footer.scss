@@ -1,0 +1,59 @@
+.footer {
+    background-color: $color-grey-dark;
+    color: white; // height: 14.3rem;
+    font-size: calc(1.5rem);
+    margin-top: -15rem;
+    &__logobox {
+        height: 15rem;
+        background: linear-gradient(270deg, #4c49b2, #db4eb2, #fbfc79, #0eb7e1);
+        background-size: 800% 800%;
+        -webkit-mask: url(../assets/img/logo.svg);
+        ;
+        mask: url(../assets/img/logo.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: top center;
+        mask-position: top center;
+        margin-bottom: 4rem;
+        -webkit-animation: Gradient 20s ease infinite;
+        -moz-animation: Gradient 20s ease infinite;
+        animation: Gradient 20s ease infinite;
+
+
+    }
+    &__list {
+        list-style: none;
+
+        text-align: left;
+    }
+    &__left {
+        @media only screen and (min-width: 768px) {
+            border-right: 1px rgba(128, 128, 128, 0.4) solid;
+        }
+    }
+    &__right {
+
+        padding-top: 1rem;
+        & ul li {
+            font-size: 2rem;
+            font-family: $font-primary;
+            font-weight: 100;
+        }
+        
+     
+    }
+    &__link:link,
+    &__link:active,
+    &__link:visited {
+        color: white;
+        display: inline-block;
+        transition: all 200ms ease-in-out;
+    }
+    &__link:hover {
+        @include link-text-animation-2;
+    }
+}
+
+.section+.footer {
+    padding-top: 20rem;
+}

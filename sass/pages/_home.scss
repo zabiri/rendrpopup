@@ -1,0 +1,63 @@
+.section {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    position: relative;
+    z-index: 2;
+}
+
+.skewed {
+    background-image: linear-gradient(white, white);
+    z-index: 3;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.section-about {
+    color: $color-grey-dark;
+    &__header {
+        color: $color-grey-dark;
+    }
+}
+
+.section-artists {
+    background-image: linear-gradient($color-grey-dark, $color-grey-dark);
+    color: white;
+    padding-bottom: 8;
+    margin-top: -14rem;
+    padding-top: 20rem;
+    margin-bottom: -20rem;
+}
+
+.section-sponsors {
+    margin-bottom: -1rem;
+    color: $color-grey-dark;
+    &__link:link,
+    &__link:active,
+    &__link:visited {
+        color: $color-blue-dark;
+    }
+    &__link {
+        transition: all 200ms ease-in-out;
+        display: inline-block;
+        &:hover {
+            @include link-text-animation-2;
+        }
+    }
+    &__sponsors {
+        margin-bottom: 7.5rem;
+        &-badge {
+            width: 100%;
+            height: auto;
+            transition: all 200ms ease-in-out;
+            &:hover {
+                transform: translateY(-.2rem);
+                filter: drop-shadow(0 .5rem .2rem rgba(black, .2));
+            }
+        }
+    }
+}
+
+.section+.section-sponsors {
+    padding-top: 12rem;
+}

@@ -1,0 +1,37 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-secondary;
+}
+
+.jumbotron h1,
+.jumbotron h2,
+.jumbotron h3,
+.jumbotron h4,
+p,
+li{
+    font-family: $font-primary;
+}
+
+a:link,
+a:active,
+a:visited,
+    {
+    color: $color-banana;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+
+.section-paragraph {
+    // text-indent: 3.5rem;
+    font-size: calc(1.4rem + 0.7vw);
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+}

@@ -1,0 +1,72 @@
+.mail {
+    background: white;
+    color: $color-grey-dark;
+    padding: .2rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: inset .2rem .2rem .2rem rgba(black, .2);
+    text-align: center;
+    
+    &__header {
+        display: inline-block;
+        text-align: center;
+        padding-bottom: .5rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid rgba(grey, .5);
+    }
+    &__indicates-required {
+        font-size: 1rem;
+        text-align: right;
+        font-family: $font-primary;
+    }
+    &__asterisk {
+        color: $color-red-marker;
+    }
+    &__label {
+        display: block;
+        font-family: $font-primary;
+        font-weight: 200;
+        margin-left: 2.2rem;
+        margin-top: .5rem;
+        font-size: 1rem;
+        transition: all 300ms;
+        text-align: left;
+    }
+    &__input {
+        font-family: $font-primary;
+        
+        box-shadow: inset .2rem .2rem .2rem rgba(black, .2);
+        display: block;
+        width: 100%;
+        border-radius: 1rem;
+        outline: none;
+        border: none;
+        background-color: rgb(216, 216, 216);
+        padding: 1rem 1.2rem .2rem 2.2rem;
+    }
+    &__input:placeholder-shown+&__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-2.4rem)
+    }
+    &__button {
+        border-radius: 2rem;
+        border: none;
+        font-family: $font-secondary;
+        color: #ffffff;
+        font-size: 1rem;
+        background: #515151;
+        padding: 1rem 2rem 1rem 2rem;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        backface-visibility: none;
+        &:hover {
+            box-shadow: .2rem .2rem .2rem rgba(black, .2);
+            transform: translateY(-.2rem);
+            background-image: linear-gradient(to bottom, #636363, #515151);
+            text-decoration: none;
+        }
+    }
+}

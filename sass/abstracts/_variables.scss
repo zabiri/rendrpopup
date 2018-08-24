@@ -1,0 +1,21 @@
+//Colors
+
+$color-grey-dark: rgb(51,51,51);
+$color-blue-dark: rgb(76, 73, 178);
+$color-blue-light: rgb(14, 183, 225);
+$color-red: rgb(219, 78, 178);
+$color-red-marker: rgb(220, 73, 60);
+$color-banana: rgb(251, 252, 121);
+
+
+//Font
+$default-font-size: 1.6rem;
+$font-primary: 'Javanese';
+$font-secondary: 'Bebas';
+
+//SHADOW
+$shadow-jumbotron-text: 0px 0px 0px $color-grey-dark, 0px 0px 1px $color-grey-dark, 0px 0px 2px $color-grey-dark, 0px 0px 3px $color-grey-dark, 0px 0px 4px $color-grey-dark, 0px 0px 5px $color-grey-dark,
+1px 0px 0px $color-grey-dark, 1px 0px 1px $color-grey-dark, 1px 0px 2px $color-grey-dark, 1px 0px 3px $color-grey-dark, 1px 0px 4px $color-grey-dark, 1px 0px 5px $color-grey-dark,
+0px 1px 0px $color-grey-dark, 0px 1px 1px $color-grey-dark, 0px 1px 2px $color-grey-dark, 0px 1px 3px $color-grey-dark, 0px 1px 4px $color-grey-dark, 0px 1px 5px $color-grey-dark,
+-1px 0px 0px $color-grey-dark, -1px 0px 1px $color-grey-dark, -1px 0px 2px $color-grey-dark, -1px 0px 3px $color-grey-dark, -1px 0px 4px $color-grey-dark, -1px 0px 5px $color-grey-dark,
+0px -1px 0px $color-grey-dark, 0px -1px 1px $color-grey-dark, 0px -1px 2px $color-grey-dark, 0px -1px 3px $color-grey-dark, 0px -1px 4px $color-grey-dark, 0px -1px 5px $color-grey-dark;
